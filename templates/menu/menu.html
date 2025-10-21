@@ -1,0 +1,149 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Redacted — Menu</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Playfair+Display:wght@400;500;700;900&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'menu/styles.css' %}">
+</head>
+<body class="lang-en" dir="ltr">
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-background">
+      <div class="hero-pattern"></div>
+      <div class="hero-gradient"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-main">
+        <div class="restaurant-logo">
+          <img src="{% static 'menu/images/logo.png' %}" alt="Redacted Logo" class="logo-image">
+          <div class="logo-ornament top"></div>
+          <h1 class="hero-title">
+            <span class="title-main">Redacted</span>
+
+          </h1>
+          <div class="logo-ornament bottom"></div>
+        </div>
+
+        <p class="hero-subtitle"
+           data-en="Authentic Middle Eastern Cuisine with Gulf Traditions"
+           data-ar="المأكولات الشرق أوسطية الأصيلة مع التقاليد الخليجية">
+          Authentic Middle Eastern Cuisine with Gulf Traditions
+        </p>
+
+        <div class="hero-features">
+          <div class="feature-item">
+            <div class="feature-icon">🍽️</div>
+            <span data-en="Fresh Daily" data-ar="طازج يومياً">Fresh Daily</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">🌿</div>
+            <span data-en="Halal Certified" data-ar="حلال معتمد">Halal Certified</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">👨‍🍳</div>
+            <span data-en="Traditional Recipes" data-ar="وصفات تقليدية">Traditional Recipes</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Creative Language Toggle -->
+      <div class="language-selector">
+        <div class="lang-toggle-container">
+          <div class="lang-option" data-lang="en">
+            <span class="lang-flag">🇺🇸</span>
+            <span class="lang-text">English</span>
+          </div>
+          <div class="toggle-switch">
+            <input type="checkbox" id="toggleLang" class="toggle-input">
+            <label for="toggleLang" class="toggle-label">
+              <span class="toggle-slider"></span>
+              <span class="toggle-text en">EN</span>
+              <span class="toggle-text ar">عر</span>
+            </label>
+          </div>
+          <div class="lang-option" data-lang="ar">
+            <span class="lang-flag">🇸🇦</span>
+            <span class="lang-text" data-en="العربية" data-ar="Arabic">العربية</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-arrow"></div>
+      <span data-en="Explore Menu" data-ar="استكشف القائمة">Explore Menu</span>
+    </div>
+  </header>
+
+  <!-- Shopping Cart Button -->
+  <div class="cart-button" id="cartButton">
+    <div class="cart-icon">🛒</div>
+    <span class="cart-count" id="cartCount">0</span>
+  </div>
+
+  <!-- Category Tabs -->
+  <nav class="category-tabs" id="categoryTabs">
+    <!-- Filled by JS -->
+  </nav>
+
+  <!-- Menu Grid -->
+  <main class="menu-container" id="menuGrid">
+    <!-- Filled by JS -->
+  </main>
+
+  <!-- Shopping Cart Sidebar -->
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3 data-en="Your Order" data-ar="طلبك">Your Order</h3>
+      <button class="cart-close" id="cartClose">×</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <!-- Cart items will be populated by JS -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span data-en="Total: " data-ar="المجموع: ">Total: </span>
+        <span id="cartTotal">$0.00</span>
+      </div>
+      <button class="checkout-btn" id="checkoutBtn" data-en="Proceed to Checkout" data-ar="المتابعة للدفع">
+        Proceed to Checkout
+      </button>
+    </div>
+  </div>
+
+  <!-- Cart Overlay -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-info">
+        <h4>Redacted</h4>
+        <p data-en="107 Maple Ave W, Vienna VA 22180" data-ar="107 مابل أف وي، فيينا، فرجينيا 22180">
+          107 Maple Ave W, Vienna VA 22180
+        </p>
+        <p data-en="Phone: +1 (571) 407-5807" data-ar="الهاتف: +1 (571) 407-5807">
+          Phone: +1 (571) 407-5807
+        </p>
+      </div>
+      <div class="footer-hours">
+        <h4 data-en="Hours" data-ar="ساعات العمل">Hours</h4>
+        <p data-en="Mon-Thu: 9AM-9PM" data-ar="الاثنين-الخميس: 9ص-9م">Mon-Thu: 9AM-9PM</p>
+        <p data-en="Fri-Sat: 9AM-10PM" data-ar="الجمعة-السبت: 9ص-10م">Fri-Sat: 9AM-10PM</p>
+        <p data-en="Sunday: 9AM-8PM" data-ar="الأحد: 9ص-8م">Sunday: 9AM-8PM</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{% static 'menu/menu-data.js' %}"></script>
+  <script src="{% static 'menu/script.js' %}"></script>
+</body>
+</html>
+
